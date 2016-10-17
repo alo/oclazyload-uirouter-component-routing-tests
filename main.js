@@ -1,9 +1,8 @@
-// Code goes here
-
 angular.module('myApp', ['ui.router', 'oc.lazyLoad'])
   .config(
-  ['$stateProvider', 
-    function ($stateProvider ) {
+  ['$stateProvider', '$urlRouterProvider',
+    function ($stateProvider, $urlRouterProvider ) {
+      $urlRouterProvider.otherwise('/');
       $stateProvider
       .state('app', {
         url: '/', 
